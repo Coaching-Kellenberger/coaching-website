@@ -1,3 +1,17 @@
 <head>
-    <title>Hello World</title>
+    <title>Coaching Kellenberger</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Coaching Kellenberger" />
+    <base href="{{ .Site.BaseURL }}" />
+
+    <link rel="icon" href="images/favicon/icon.svg">
+    <link rel="mask-icon" href="images/favicon/mask-icon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    {{ $sass := resources.Get "scss/main.scss" }}
+    {{ $style := $sass | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>

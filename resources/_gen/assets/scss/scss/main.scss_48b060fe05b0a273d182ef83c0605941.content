@@ -1,0 +1,1 @@
+body{margin:0}body .container{max-width:100%;width:100;min-height:100vh}body .container #header-logo{width:320px;max-width:100%;margin:72px auto 0}body .container #header-logo img{width:100%}

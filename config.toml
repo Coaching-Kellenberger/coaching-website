@@ -1,2 +1,8 @@
 languageCode = "de-ch"
 title = "Coaching Kellenberger"
+
+DefaultContentLanguage = "de"
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
+
+[markup.goldmark.renderer]
+  unsafe= true

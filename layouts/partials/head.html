@@ -14,4 +14,19 @@
     {{ $sass := resources.Get "scss/main.scss" }}
     {{ $style := $sass | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ $main := resources.Get "js/dist/main.min.js" | fingerprint }}
+    <script
+        type="text/javascript"
+        src="{{ $main.Permalink }}"
+        integrity="{{ $main.Data.Integrity }}"
+    ></script>
+
+    <meta property="ix:host" content="www.datocms-assets.com" />
+    <meta property="ix:useHttps" content="true" />
+    <meta property="ix:includeLibraryParam" content="false" />
+    <!-- for lazysizes -->
+    <meta property="ix:srcAttribute" content="data-src" />
+    <meta property="ix:srcsetAttribute" content="data-srcset" />
+    <meta property="ix:sizesAttribute" content="data-sizes" />
 </head>

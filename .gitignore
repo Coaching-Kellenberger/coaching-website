@@ -1,1 +1,13 @@
+.vscode/
+
 /public
+/node_modules
+/assets/js/dist
+
+*.log
+
+/content
+/data
+
+pull_dev_content.sh
+pull_prod_content.sh

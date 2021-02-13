@@ -1,0 +1,27 @@
+{
+  "name": "coaching-kellenberger-website",
+  "version": "1.0.0",
+  "repository": "git@github.com:Coaching-Kellenberger/coaching-website.git",
+  "author": "Sven Kellenberger <sven.kellenberger@kellenberger.tv>",
+  "scripts": {
+    "build:prod:js": "webpack --config webpack.prod.js",
+    "build:dev:js": "webpack --config webpack.dev.js",
+    "watch:js": "webpack --config webpack.dev.js --watch"
+  },
+  "dependencies": {
+    "imgix.js": "^3.4.2",
+    "lazysizes": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "core-js": "3",
+    "datocms-client": "^3.0.18",
+    "exports-loader": "^0.7.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  }
+}

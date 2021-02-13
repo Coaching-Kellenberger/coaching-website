@@ -1,7 +1,9 @@
 {{ define "main" }}
-<div id="header-logo">
-    <img src="images/logo_outline.svg" alt="" >
-</div>
+<div id="placeholder">
+    <div id="header-logo">
+        <img src="images/logo_outline.svg" alt="" />
+    </div>
 
-{{ .Params.text | markdownify }}
+    <div class="text p">{{ .Params.text | markdownify }}</div>
+</div>
 {{ end }}

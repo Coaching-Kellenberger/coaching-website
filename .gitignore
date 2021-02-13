@@ -2,6 +2,7 @@
 
 /public
 /node_modules
+/resources
 /assets/js/dist
 
 *.log

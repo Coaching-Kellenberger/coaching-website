@@ -10,37 +10,22 @@ on:
       - develop
 
 jobs:
-  strategy: 
-    max-parallel: 1
-    
-  build_js_and_pull_content:
+  build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build JS und Pull Content Job
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn install
-      - run: yarn build:dev:js
-      - run: yarn dato dump --token=${{ secrets.DATO_API_TOKEN }} --preview
-
-  build_hugo_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-    runs-on: ubuntu-latest
-    name: Build Hugo and Deploy Job
+    name: Build and Deploy Job
 
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Use Node.js 14.15.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.15.1
+      - run: yarn install
+      - run: yarn build:dev:js
+      - run: yarn dato dump --token=${{ secrets.DATO_API_TOKEN }} --preview
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview

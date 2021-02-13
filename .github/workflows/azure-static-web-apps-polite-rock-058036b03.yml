@@ -31,6 +31,6 @@ jobs:
           api_location: "api" # Api source code path - optional
           output_location: "public" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-          app_build_command: "hugo --minify -b https://kellenberger-coaching.ch"
+          app_build_command: "hugo --minify -b https://www.kellenberger-coaching.ch"
         env: 
           HUGO_VERSION: 0.78.2

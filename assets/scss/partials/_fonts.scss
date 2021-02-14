@@ -33,11 +33,27 @@
 body {
     font-family: Manrope;
 
+    h1 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.27;
+        letter-spacing: normal;
+    }
+
     p, .p {
         margin: 0;
         font-size: 16px;
         font-weight: 300;
         line-height: 1.63;
         letter-spacing: 0.36px;
+    }
+
+    @media screen and (min-width: 600px) {
+        h1 {
+            font-size: 48px;
+            line-height: 1;
+            letter-spacing: normal;
+        }
     }
 }

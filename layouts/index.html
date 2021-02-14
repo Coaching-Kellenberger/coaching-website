@@ -4,6 +4,15 @@
         <img src="images/logo_outline.svg" alt="" />
     </div>
 
+    <div class="title"><h1>{{ .Params.title }}</h1></div>
+
     <div class="text p">{{ .Params.text | markdownify }}</div>
+
+    <div class="contact-info">
+        <p>Wilerstrasse 8</p>
+        <p>8370 Sirnach</p>
+        <p><a href="mailto:n.kellenberger@bluewin.ch">n.kellenberger@bluewin.ch</a></p>
+        <p><a href="tel:+41797717777">079 771 77 77</a></p>
+    </div>
 </div>
 {{ end }}

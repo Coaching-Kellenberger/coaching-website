@@ -4,6 +4,7 @@ module.exports = (dato, root, i18n) => {
             i18n.locale = locale;
             dir.createPost(`_index.${locale}.md`, "yaml", {
                 frontmatter: {
+                    title: dato.placeholder.title,
                     text: dato.placeholder.text,
                 },
             });

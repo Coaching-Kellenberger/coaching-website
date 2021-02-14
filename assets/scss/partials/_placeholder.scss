@@ -1,3 +1,6 @@
+$lila: #c12485;
+$text: #333333;
+
 #placeholder {
     padding-top: 72px;
     max-width: 1200px;
@@ -17,6 +20,7 @@
     .title {
         text-align: center;
         margin-bottom: 40px;
+        color: $text;
     }
 
     .text {
@@ -25,10 +29,16 @@
         padding: 0 24px;
         margin: 0 auto;
         margin-bottom: 72px;
+        color: $text;
     }
 
     .contact-info {
-        display: table;
+        text-align: center;
         margin: 0 auto;
+        color: $text;
+
+        a {
+            color: $lila;
+        }
     }
 }
